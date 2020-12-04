@@ -1,0 +1,37 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8" />
+  <title>AFrame Dungeon</title>
+  <script src="js/aframe-master.js"></script>
+  <script src="js/handleEvents.js"></script>
+  <!-- <script src="js/animations.js"></script> -->
+  <script src="js/movement.js"></script>
+  <script src="js/enemy.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/aframe-physics-system.min.js"></script>
+  <script src="js/aframe-extras.min.js"></script>
+  <script>
+
+    if (window.THREE) {
+      window.THREE.ImageLoader.prototype.corssOrigin = ''
+
+    }
+  </script>
+</head>
+
+<body class="a-body">
+  <a-scene>
+    <a-assets>
+    <img id="ghost" src="https://cdn.glitch.com/c9ce849c-7145-4b26-8f46-ee20e8dc80cd%2F12219_boat_v2_L2.obj?v=1607125426595" crossorigin="anonymous" />
+  </a-assets>
+      <a-entity static-body="shape:box"  
+             obj-model="resource/12219_boat_v2_L2.obj"
+   > </a-entity>
+    <a-ocean position="0 0 0" width="10" depth="10" opacity="1"></a-ocean>
+  </a-scene>
+
+
+</body>
+
+</html>
